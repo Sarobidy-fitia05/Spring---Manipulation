@@ -3,12 +3,12 @@ package com.example.demo.entity;
 import java.util.Objects;
 
 public class Student {
-    private int id;
+    private String id;
     private String firstname;
     private String lastname;
     private int age;
 
-    public Student(int id, String firstname, String lastname, int age) {
+    public Student(String id, String firstname, String lastname, int age) {
         this.id = id;
         this.firstname = firstname;
         this.lastname = lastname;
@@ -18,11 +18,12 @@ public class Student {
     public Student () {
 
     }
-    public int getId() {
+
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
