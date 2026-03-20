@@ -14,7 +14,7 @@ public class StudentControlleur {
     public String addStudent(@RequestBody List<Student> students) {
         this.studentList.addAll(students);
         return studentList.stream()
-                .map(s -> "id :" + s.getId() + ", "+
+                .map(s -> "REF :" + s.getRef() + ", "+
                         "Nom : " + s.getLastname() + ", "+
                         "prénom : "+ s.getFirstname()+ ", "+
                         "Age: "+ s.getAge()  )
