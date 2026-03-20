@@ -3,13 +3,13 @@ package com.example.demo.entity;
 import java.util.Objects;
 
 public class Student {
-    private String id;
+    private String ref;
     private String firstname;
     private String lastname;
     private int age;
 
-    public Student(String id, String firstname, String lastname, int age) {
-        this.id = id;
+    public Student(String ref, String firstname, String lastname, int age) {
+        this.ref = ref;
         this.firstname = firstname;
         this.lastname = lastname;
         this.age = age;
@@ -19,12 +19,12 @@ public class Student {
 
     }
 
-    public String getId() {
-        return id;
+    public String getRef() {
+        return ref;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setRef(String ref) {
+        this.ref = ref;
     }
 
     public String getFirstname() {
@@ -55,18 +55,18 @@ public class Student {
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         Student student = (Student) o;
-        return id == student.id && age == student.age && Objects.equals(firstname, student.firstname) && Objects.equals(lastname, student.lastname);
+        return age == student.age && Objects.equals(ref, student.ref) && Objects.equals(firstname, student.firstname) && Objects.equals(lastname, student.lastname);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, firstname, lastname, age);
+        return Objects.hash(ref, firstname, lastname, age);
     }
 
     @Override
     public String toString() {
         return "Student{" +
-                "id=" + id +
+                "ref='" + ref + '\'' +
                 ", firstname='" + firstname + '\'' +
                 ", lastname='" + lastname + '\'' +
                 ", age=" + age +
