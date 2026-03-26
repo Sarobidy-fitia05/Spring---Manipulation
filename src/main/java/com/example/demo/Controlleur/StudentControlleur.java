@@ -42,13 +42,13 @@ public class StudentControlleur {
 //            return "Format non supporté";
 //        }
 //    }
-@GetMapping("/welcome")
-public ResponseEntity<String> td3 (@RequestParam(value = "name", required = false) String name) {
-    if (name == null || name.isEmpty()){
-        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Le paramètre 'name' est obligatoire.");
-    }
-    return ResponseEntity.ok("Welcome " + name);
-}
+//@GetMapping("/welcome")
+//public ResponseEntity<String> td3 (@RequestParam(value = "name", required = false) String name) {
+//    if (name == null || name.isEmpty()){
+//        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Le paramètre 'name' est obligatoire.");
+//    }
+//    return ResponseEntity.ok("Welcome " + name);
+//}
 //    @PostMapping("/students")
 //    public ResponseEntity<List<Student>> addStudentsTD3(@RequestBody List<Student> students) {
 //        try {
